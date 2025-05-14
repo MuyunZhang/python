@@ -7,7 +7,7 @@ def get_database_connection():
     return connection
 
 def execute_statement(connection, statement):
-    cursor = connection.cursor
+    cursor = connection.cursor()
     cursor.execute(statement)
     results = []
 
@@ -33,10 +33,10 @@ for result in results:
     course = result[1]
     room = result[2]
     teacher = result[3]
-    print("Period: " + period)
-    print("Course: " + course)
-    print("Room: " + room)
-    print("Teacher: " + teacher)
+    print("Period: ",  period)
+    print("Course: ",  course)
+    print("Room: ", room)
+    print("Teacher: ", teacher)
     print()
 
 
